@@ -1,31 +1,11 @@
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import MetaPageEvents from "@/components/meta/page-events";
 import WhatsAppFloatingButton from "@/components/meta/whatsapp-floating-button";
+import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig, getSiteUrl } from "@/lib/site-config";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -65,11 +45,7 @@ export default function RootLayout({
   const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${jetbrainsMono.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="en" suppressHydrationWarning>
       <body className="font-sans antialiased min-h-screen">
         {pixelId && (
           <>
@@ -99,13 +75,21 @@ export default function RootLayout({
           </>
         )}
 
-        <Suspense fallback={null}>
-          <MetaPageEvents />
-        </Suspense>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          themes={["dark", "light"]}
+          disableTransitionOnChange
+        >
+          <Suspense fallback={null}>
+            <MetaPageEvents />
+          </Suspense>
 
-        {children}
+          {children}
 
-        <WhatsAppFloatingButton />
+          <WhatsAppFloatingButton />
+        </ThemeProvider>
       </body>
     </html>
   );

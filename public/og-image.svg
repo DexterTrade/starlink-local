@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E0D0B"/>
+      <stop offset="1" stop-color="#1A1612"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E4C677"/>
+      <stop offset="1" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="80" width="60" height="60" transform="rotate(45 110 110)" stroke="#D4AF37" stroke-width="2"/>
+  <path d="M91 124 L91 96 L110 113 L129 96 L129 124" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="180" y="120" font-family="Georgia, serif" font-size="48" fill="#F5F1E8">Marth</text>
+  <text x="180" y="158" font-family="monospace" font-size="14" fill="#888" letter-spacing="6">LOGISTICS</text>
+  <text x="80" y="380" font-family="Georgia, serif" font-size="96" fill="#F5F1E8" font-style="italic">A new standard</text>
+  <text x="80" y="490" font-family="Georgia, serif" font-size="96" fill="url(#gold)" font-style="italic">in worldwide</text>
+  <text x="80" y="590" font-family="Georgia, serif" font-size="96" fill="url(#gold)" font-style="italic">freight.</text>
+</svg>

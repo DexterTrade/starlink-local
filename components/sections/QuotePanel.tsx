@@ -96,7 +96,7 @@ export default function QuotePanel() {
     <section id="quote" className="relative py-24 md:py-32 bg-[image:var(--grad-onyx)]">
       <div className="absolute top-0 inset-x-0 gold-divider" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 items-start">
           {/* Left — address card */}
           <div>

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Wordmark } from "./wordmark";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { getCookie, sendMetaEvent } from "@/lib/meta-client";
 import { scrollToQuoteForm } from "@/lib/scroll";
 import { cn } from "@/lib/utils";
@@ -47,7 +48,7 @@ export function Header() {
         scrolled ? "backdrop-blur-xl bg-background/70 border-b border-border/60" : "bg-transparent",
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
           <Wordmark />
 
@@ -78,6 +79,7 @@ export function Header() {
 
           {/* Right cluster */}
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Button
               className="hidden sm:inline-flex"
               size="default"
@@ -144,6 +146,8 @@ export function Header() {
             >
               Request a Quote
             </Button>
+
+            <ThemeToggle variant="labeled" className="mt-3" />
           </div>
         )}
       </div>

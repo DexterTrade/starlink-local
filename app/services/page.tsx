@@ -107,7 +107,7 @@ export default function ServicesPage() {
       <main>
         {/* Hero */}
         <section className="relative pt-20 pb-24 md:pt-32 md:pb-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <p className="eyebrow mb-6">The catalogue</p>
             <h1 className="display-serif text-5xl sm:text-6xl lg:text-[7rem] text-foreground leading-[0.95] max-w-5xl">
               Five <em className="italic text-gold">disciplines</em>,
@@ -125,7 +125,7 @@ export default function ServicesPage() {
 
         {/* Services list */}
         <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 space-y-32">
             {SERVICES.map((s, i) => (
               <article
                 key={s.id}
@@ -209,7 +209,7 @@ export default function ServicesPage() {
 
         {/* Closing CTA */}
         <section className="py-24 md:py-32 bg-[image:var(--grad-onyx)] border-t border-border/60">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 lg:px-6 text-center">
             <p className="eyebrow mb-4">An exit</p>
             <h2 className="display-serif text-4xl md:text-6xl text-foreground leading-[0.95] mb-8">
               Have something

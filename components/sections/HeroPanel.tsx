@@ -41,7 +41,7 @@ export default function HeroPanel() {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-24 pb-32">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 pt-12 lg:pt-24 pb-32">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-20 items-start">
           {/* Left — editorial copy */}
           <div className="reveal">

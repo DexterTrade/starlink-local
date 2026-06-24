@@ -38,7 +38,7 @@ export default function ManifestoPanel() {
   return (
     <section id="manifesto" className="relative py-24 md:py-32 bg-[image:var(--grad-onyx)]">
       <div className="absolute top-0 inset-x-0 gold-divider" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         {/* Two-column intro */}
         <div className="grid md:grid-cols-2 gap-12 mb-20">
           <div>

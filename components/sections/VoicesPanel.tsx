@@ -27,7 +27,7 @@ const VOICES = [
 export default function VoicesPanel() {
   return (
     <section id="voices" className="relative py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="grid md:grid-cols-[1fr_1.6fr] gap-12 mb-16 items-end">
           <div>
             <p className="eyebrow mb-4">Chapter four</p>

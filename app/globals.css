@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark, .dark *));
+
 /* ──────────────────────────────────────────────────────────
    Marth Logistics — design tokens
-   Dark editorial. Onyx + brushed gold + champagne accent.
+   Default = dark (onyx + brushed gold).
+   .light = cream paper with gold ink (same brand, daylit).
    ────────────────────────────────────────────────────────── */
 
 :root {
@@ -11,7 +16,7 @@
   --background: oklch(0.13 0.008 60);
   --foreground: oklch(0.94 0.012 80);
 
-  /* Surfaces (cards, popovers) */
+  /* Surfaces */
   --card: oklch(0.165 0.008 60);
   --card-foreground: var(--foreground);
   --popover: oklch(0.18 0.008 60);
@@ -25,7 +30,7 @@
   --secondary: oklch(0.21 0.008 60);
   --secondary-foreground: oklch(0.92 0.012 80);
 
-  /* Muted — softer than secondary */
+  /* Muted */
   --muted: oklch(0.2 0.008 60);
   --muted-foreground: oklch(0.7 0.012 80);
 
@@ -46,7 +51,7 @@
   --input: oklch(0.22 0.008 60);
   --ring: oklch(0.78 0.13 84);
 
-  /* Sidebar (admin) */
+  /* Sidebar */
   --sidebar: oklch(0.15 0.008 60);
   --sidebar-foreground: var(--foreground);
   --sidebar-primary: var(--primary);
@@ -63,41 +68,117 @@
   --chart-4: oklch(0.62 0.1 30);
   --chart-5: oklch(0.55 0.04 60);
 
-  /* Radii — restrained, editorial */
+  /* Radii */
   --radius: 0.25rem;
 
-  /* Brand gradients */
+  /* ── Brand-specific theme-adaptive tokens ─────────── */
+
+  /* Gold ink — bright in dark, deeper in light */
+  --gold-ink: oklch(0.86 0.13 84);
+  --gold-ink-soft: oklch(0.78 0.13 84 / 0.7);
+  --gold-edge: oklch(0.78 0.13 84 / 0.5);
+
+  /* Section bg gradient (was: --grad-onyx) */
+  --grad-soft: linear-gradient(180deg, oklch(0.13 0.008 60) 0%, oklch(0.08 0.006 60) 100%);
+
+  /* Body radial glows */
+  --bg-glow-1: oklch(0.22 0.04 60 / 0.45);
+  --bg-glow-2: oklch(0.2 0.03 80 / 0.35);
+
+  /* Glass card */
+  --glass-bg: oklch(0.16 0.008 60 / 0.55);
+  --glass-border: oklch(0.78 0.13 84 / 0.18);
+
+  /* Selection */
+  --selection-bg: oklch(0.78 0.13 84 / 0.35);
+
+  /* Gold CTA gradient (stays gold in both themes) */
   --grad-gold: linear-gradient(135deg, oklch(0.86 0.13 84) 0%, oklch(0.7 0.16 60) 100%);
-  --grad-onyx: linear-gradient(180deg, oklch(0.13 0.008 60) 0%, oklch(0.08 0.006 60) 100%);
-  --hairline: oklch(0.78 0.13 84 / 0.5);
+
+  /* Legacy alias — many components reference --grad-onyx */
+  --grad-onyx: var(--grad-soft);
+  --hairline: var(--gold-edge);
 }
 
-/* No light theme variant — Marth is intentionally a dark-only brand. */
+/* ── Light theme — cream paper, gold ink ─────────── */
 .light {
-  --background: oklch(0.97 0.005 80);
-  --foreground: oklch(0.14 0.008 60);
-  --card: oklch(0.99 0.003 80);
+  /* Stage — warm ivory */
+  --background: oklch(0.975 0.01 84);
+  --foreground: oklch(0.18 0.01 60);
+
+  /* Surfaces — almost white with warm cast */
+  --card: oklch(0.99 0.006 84);
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: oklch(0.55 0.12 70);
-  --primary-foreground: oklch(0.98 0.005 80);
-  --secondary: oklch(0.94 0.008 80);
-  --secondary-foreground: var(--foreground);
-  --muted: oklch(0.93 0.008 80);
-  --muted-foreground: oklch(0.4 0.012 80);
-  --accent: oklch(0.78 0.08 84);
-  --accent-foreground: var(--foreground);
-  --border: oklch(0.88 0.008 80);
-  --input: var(--border);
-  --ring: var(--primary);
+
+  /* Primary — deeper gold for contrast on cream */
+  --primary: oklch(0.6 0.13 75);
+  --primary-foreground: oklch(0.98 0.008 84);
+
+  /* Secondary — warm stone */
+  --secondary: oklch(0.94 0.012 84);
+  --secondary-foreground: oklch(0.22 0.01 60);
+
+  /* Muted */
+  --muted: oklch(0.93 0.014 84);
+  --muted-foreground: oklch(0.42 0.012 60);
+
+  /* Accent — soft warm tan */
+  --accent: oklch(0.86 0.08 78);
+  --accent-foreground: oklch(0.2 0.01 60);
+
+  /* Destructive */
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0.008 84);
+
+  /* Success */
+  --success: oklch(0.55 0.14 165);
+  --success-foreground: oklch(0.98 0.008 84);
+
+  /* Borders & inputs */
+  --border: oklch(0.88 0.012 84);
+  --input: oklch(0.96 0.008 84);
+  --ring: oklch(0.6 0.13 75);
+
+  /* Sidebar */
+  --sidebar: oklch(0.96 0.012 84);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+
+  /* ── Brand-specific overrides for light ─────────── */
+
+  /* Gold ink — deeper, more legible on cream */
+  --gold-ink: oklch(0.58 0.15 70);
+  --gold-ink-soft: oklch(0.6 0.13 75 / 0.7);
+  --gold-edge: oklch(0.6 0.13 75 / 0.5);
+
+  /* Section bg — barely-tinted cream gradient instead of onyx */
+  --grad-soft: linear-gradient(180deg, oklch(0.96 0.014 82) 0%, oklch(0.93 0.018 80) 100%);
+  --grad-onyx: var(--grad-soft);
+
+  /* Body radial glows — soft warm/cream haze */
+  --bg-glow-1: oklch(0.88 0.05 78 / 0.55);
+  --bg-glow-2: oklch(0.93 0.04 84 / 0.5);
+
+  /* Glass — frosted white */
+  --glass-bg: oklch(1 0 0 / 0.7);
+  --glass-border: oklch(0.6 0.13 75 / 0.18);
+
+  /* Selection */
+  --selection-bg: oklch(0.6 0.13 75 / 0.22);
+
+  /* Hairline + chart palette get a gentler tone */
+  --hairline: var(--gold-edge);
+  --chart-3: oklch(0.55 0.14 165);
+  --chart-4: oklch(0.6 0.12 30);
+  --chart-5: oklch(0.55 0.03 60);
 }
 
 @theme inline {
-  /* Fonts — wired via next/font in layout.tsx */
-  --font-sans: var(--font-inter), "Inter Fallback", system-ui, sans-serif;
-  --font-serif: var(--font-cormorant), "Cormorant Garamond Fallback", serif;
-  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono Fallback", monospace;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -155,20 +236,21 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
     background:
-      radial-gradient(1200px 600px at 80% -10%, oklch(0.22 0.04 60 / 0.45), transparent 60%),
-      radial-gradient(900px 500px at -10% 30%, oklch(0.2 0.03 80 / 0.35), transparent 60%),
+      radial-gradient(1200px 600px at 80% -10%, var(--bg-glow-1), transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, var(--bg-glow-2), transparent 60%),
       var(--background);
     background-attachment: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
-    background: oklch(0.78 0.13 84 / 0.35);
+    background: var(--selection-bg);
     color: var(--foreground);
   }
 }
 
 /* ──────────────────────────────────────────────────────────
-   Brand utilities — usable as Tailwind class names.
+   Brand utilities
    ────────────────────────────────────────────────────────── */
 
 @utility font-serif {
@@ -180,19 +262,19 @@
 }
 
 @utility text-gold {
-  color: oklch(0.86 0.13 84);
+  color: var(--gold-ink);
 }
 @utility text-champagne {
-  color: oklch(0.9 0.07 84);
+  color: var(--accent);
 }
 @utility bg-gold {
   background: var(--grad-gold);
 }
 @utility bg-onyx {
-  background: var(--grad-onyx);
+  background: var(--grad-soft);
 }
 @utility border-gold {
-  border-color: oklch(0.78 0.13 84 / 0.4);
+  border-color: var(--gold-edge);
 }
 
 @utility hairline {
@@ -205,14 +287,14 @@
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 0.7rem;
-  color: oklch(0.86 0.13 84);
+  color: var(--gold-ink);
 }
 
 @utility chapter-number {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 300;
-  color: oklch(0.78 0.13 84 / 0.7);
+  color: var(--gold-ink-soft);
   letter-spacing: -0.02em;
 }
 
@@ -224,10 +306,10 @@
 }
 
 @utility glass {
-  background: oklch(0.16 0.008 60 / 0.55);
+  background: var(--glass-bg);
   backdrop-filter: blur(14px) saturate(120%);
   -webkit-backdrop-filter: blur(14px) saturate(120%);
-  border: 1px solid oklch(0.78 0.13 84 / 0.18);
+  border: 1px solid var(--glass-border);
 }
 
 @utility gold-divider {
@@ -235,7 +317,7 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    oklch(0.78 0.13 84 / 0.6) 50%,
+    var(--gold-edge) 50%,
     transparent 100%
   );
 }
@@ -243,10 +325,10 @@
 @utility shimmer-gold {
   background: linear-gradient(
     100deg,
-    oklch(0.86 0.13 84) 0%,
-    oklch(0.95 0.06 84) 30%,
-    oklch(0.78 0.16 60) 60%,
-    oklch(0.86 0.13 84) 100%
+    var(--gold-ink) 0%,
+    oklch(from var(--gold-ink) calc(l + 0.1) c h) 30%,
+    var(--primary) 60%,
+    var(--gold-ink) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -254,11 +336,11 @@
 }
 
 /* Subtle grain overlay for hero / cards */
-@utility grain {
+.grain {
   position: relative;
   isolation: isolate;
 }
-@utility grain::after {
+.grain::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -275,14 +357,14 @@
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-@utility marquee-track {
+.marquee-track {
   animation: marth-marquee 40s linear infinite;
 }
-@utility marquee-track:hover {
+.marquee-track:hover {
   animation-play-state: paused;
 }
 
-/* Fade-up reveal — used by sections via .reveal */
+/* Fade-up reveal */
 @keyframes marth-reveal {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }

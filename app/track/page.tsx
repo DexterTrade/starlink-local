@@ -207,7 +207,7 @@ export default function TrackPage() {
       <main>
         {/* Hero */}
         <section className="relative pt-16 pb-20 md:pt-24 md:pb-28 bg-[image:var(--grad-onyx)]">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 lg:px-6 text-center">
             <p className="eyebrow mb-6">Live ledger</p>
             <h1 className="display-serif text-5xl md:text-6xl text-foreground leading-[0.95] mb-8">
               Where is your
@@ -238,7 +238,7 @@ export default function TrackPage() {
 
         {/* Results */}
         <section className="py-16 md:py-20 min-h-[40vh]">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 lg:px-6">
             {error && (
               <p className="text-center text-destructive text-sm">{error}</p>
             )}

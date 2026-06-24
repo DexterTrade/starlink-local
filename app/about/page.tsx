@@ -58,7 +58,7 @@ export default function AboutPage() {
       <main>
         {/* Hero */}
         <section className="relative pt-20 pb-24 md:pt-32 md:pb-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <p className="eyebrow mb-6">The studio</p>
             <h1 className="display-serif text-5xl sm:text-6xl lg:text-[7rem] text-foreground leading-[0.95] max-w-5xl">
               A small house,
@@ -78,7 +78,7 @@ export default function AboutPage() {
 
         {/* Numbers */}
         <section className="py-20 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4">
               {NUMBERS.map((n, i) => (
                 <div
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
         {/* The story */}
         <section className="py-24 md:py-32 bg-[image:var(--grad-onyx)]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 lg:px-6">
             <p className="eyebrow mb-4">Our story</p>
             <h2 className="display-serif text-4xl md:text-5xl text-foreground mb-10 leading-tight">
               We started by counting boxes
@@ -133,7 +133,7 @@ export default function AboutPage() {
 
         {/* Values */}
         <section className="py-24 md:py-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <div className="grid md:grid-cols-[1fr_1.6fr] gap-12 mb-16">
               <div>
                 <p className="eyebrow mb-4">What we hold</p>
@@ -169,7 +169,7 @@ export default function AboutPage() {
 
         {/* The team / desks */}
         <section className="py-24 md:py-32 bg-[image:var(--grad-onyx)]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <p className="eyebrow mb-4">The desks</p>
             <h2 className="display-serif text-5xl text-foreground mb-12 leading-[0.95] max-w-3xl">
               Where the <em className="italic text-gold">paperwork</em> lives.

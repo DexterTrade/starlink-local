@@ -135,7 +135,7 @@ export default function ContactPage() {
       <main>
         {/* Hero */}
         <section className="relative pt-20 pb-20 md:pt-28 md:pb-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <p className="eyebrow mb-6">Direct line</p>
             <h1 className="display-serif text-5xl sm:text-6xl lg:text-[6.5rem] text-foreground leading-[0.95] max-w-5xl">
               Tell us where
@@ -152,7 +152,7 @@ export default function ContactPage() {
 
         {/* Contact cards */}
         <section className="py-16 md:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/40 border border-border/40">
               {cards.map((c) => {
                 const Inner = (
@@ -189,7 +189,7 @@ export default function ContactPage() {
 
         {/* Form + map */}
         <section className="py-16 md:py-24 bg-[image:var(--grad-onyx)]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
             <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
               {/* Left — studio + map */}
               <div>

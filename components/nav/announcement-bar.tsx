@@ -21,7 +21,7 @@ export function AnnouncementBar() {
     <div className="relative w-full overflow-hidden border-b border-primary/15 bg-[image:linear-gradient(90deg,oklch(0.13_0.008_60),oklch(0.18_0.02_60),oklch(0.13_0.008_60))]">
       <div className="absolute inset-x-0 top-0 hairline" />
       <div className="absolute inset-x-0 bottom-0 hairline" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 py-2.5 text-xs">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex items-center justify-between gap-4 py-2.5 text-xs">
         <a
           href={primaryWa}
           target="_blank"

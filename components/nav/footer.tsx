@@ -42,7 +42,7 @@ export function Footer() {
     <footer id="footer" className="relative mt-24 border-t border-border/60 bg-[image:var(--grad-onyx)]">
       <div className="absolute top-0 left-0 right-0 hairline" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 pt-20 pb-10">
         {/* Top band — wordmark + tagline + CTA */}
         <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 pb-16 border-b border-border/40">
           <div>

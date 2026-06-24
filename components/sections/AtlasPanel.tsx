@@ -38,7 +38,7 @@ export default async function AtlasPanel() {
 
   return (
     <section id="atlas" className="relative py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         {/* Header */}
         <div className="grid md:grid-cols-[1fr_1.4fr] gap-12 mb-16">
           <div>

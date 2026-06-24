@@ -40,7 +40,7 @@ export default function InquiriesPanel() {
 
   return (
     <section id="inquiries" className="relative py-24 md:py-32">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="grid md:grid-cols-[1fr_1.4fr] gap-12 mb-16">
           <div>
             <p className="eyebrow mb-4">Chapter five</p>

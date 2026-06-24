@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Wordmark } from "@/components/nav/wordmark";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   supabase,
   type Country,
@@ -514,22 +515,25 @@ export default function AdminPage() {
     <main className="min-h-screen bg-background text-foreground">
       {/* Slim admin header */}
       <header className="sticky top-0 z-30 bg-background/85 backdrop-blur-md border-b border-border/60">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <Wordmark />
           <p className="hidden md:block eyebrow">Admin · {siteConfig.brand.short}</p>
-          {session && (
-            <button
-              type="button"
-              onClick={onLogout}
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-destructive transition-colors"
-            >
-              <LogOut className="h-4 w-4" /> Logout
-            </button>
-          )}
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            {session && (
+              <button
+                type="button"
+                onClick={onLogout}
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-destructive transition-colors px-2"
+              >
+                <LogOut className="h-4 w-4" /> Logout
+              </button>
+            )}
+          </div>
         </div>
       </header>
 
-      <section className="max-w-7xl mx-auto px-6 py-10">
+      <section className="max-w-7xl mx-auto px-4 py-10">
         <p className="eyebrow mb-2">Console</p>
         <h1 className="display-serif text-4xl md:text-5xl text-foreground leading-tight">
           The <em className="italic text-gold">ledger</em>.

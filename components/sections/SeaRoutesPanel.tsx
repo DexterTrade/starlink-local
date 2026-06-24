@@ -53,7 +53,7 @@ export default function SeaRoutesPanel() {
         />
       </svg>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Editorial copy */}
           <div>
