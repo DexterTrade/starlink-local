@@ -1,12 +1,12 @@
 # AGENT.md
 
-Guidance for any AI agent working with the **Marth Logistics** repo.
+Guidance for any AI agent working with the **Starlink Courier & Cargo Service** repo.
 
 ---
 
 ## Project Overview
 
-**Marth Logistics** — a premium logistics & freight-forwarding website. The public site presents a dark, editorial, gold-accented brand experience; the admin panel manages parcels and per-country rates against a Supabase backend; customers track parcels by UUID or phone number.
+**Starlink Courier & Cargo Service** — a courier and cargo website with a dark, editorial, gold-accented design language. The public site markets air/sea/land freight and DDP delivery; the admin panel manages parcels and per-country rates against a Supabase backend; customers track parcels by UUID or phone number.
 
 **Stack:** Next.js 16 (App Router) · React 19 · TypeScript 5 · TailwindCSS v4 · shadcn/ui (new-york) · Supabase · Framer Motion
 

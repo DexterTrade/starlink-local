@@ -4,23 +4,24 @@ const pick = (value: string | undefined, fallback: string) =>
 const stripSlash = (url: string) => url.replace(/\/+$/, "");
 
 export const siteConfig = {
-  url: stripSlash(pick(process.env.NEXT_PUBLIC_SITE_URL, "https://www.marth-logistics.com")),
+  url: stripSlash(pick(process.env.NEXT_PUBLIC_SITE_URL, "https://www.starlinkcourier.com")),
 
   brand: {
-    name: pick(process.env.NEXT_PUBLIC_BRAND_NAME, "Marth Logistics"),
-    short: pick(process.env.NEXT_PUBLIC_BRAND_SHORT, "Marth"),
+    name: pick(process.env.NEXT_PUBLIC_BRAND_NAME, "Starlink Courier & Cargo Service"),
+    short: pick(process.env.NEXT_PUBLIC_BRAND_SHORT, "Starlink"),
+    eyebrow: pick(process.env.NEXT_PUBLIC_BRAND_EYEBROW, "Courier & Cargo"),
     tagline: pick(
       process.env.NEXT_PUBLIC_BRAND_TAGLINE,
-      "A new standard in worldwide freight.",
+      "Reliable courier and cargo, delivered worldwide.",
     ),
     description: pick(
       process.env.NEXT_PUBLIC_BRAND_DESCRIPTION,
-      "Premium cargo, freight forwarding, and DDP shipping connecting Pakistan to every continent — handled with care, delivered without compromise.",
+      "Trusted courier and cargo service connecting Pakistan to the world — air freight, sea cargo, DDP delivery, and door-to-door parcel handling without surprises.",
     ),
   },
 
   contact: {
-    email: pick(process.env.NEXT_PUBLIC_EMAIL, "hello@marth-logistics.com"),
+    email: pick(process.env.NEXT_PUBLIC_EMAIL, "hello@starlinkcourier.com"),
     phonePrimary: pick(process.env.NEXT_PUBLIC_PHONE_PRIMARY, "+92 332 6135002"),
     phoneSecondary: pick(process.env.NEXT_PUBLIC_PHONE_SECONDARY, "+92 332 8884396"),
     phoneUK: pick(process.env.NEXT_PUBLIC_PHONE_UK, "+44 7404 654725"),

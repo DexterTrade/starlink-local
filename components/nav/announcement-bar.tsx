@@ -18,7 +18,7 @@ export function AnnouncementBar() {
   const ukWa = `https://wa.me/${whatsapp.uk}`;
 
   return (
-    <div className="relative w-full overflow-hidden border-b border-primary/15 bg-[image:linear-gradient(90deg,oklch(0.13_0.008_60),oklch(0.18_0.02_60),oklch(0.13_0.008_60))]">
+    <div className="relative w-full overflow-hidden border-b border-primary/15 bg-[image:var(--grad-bar)]">
       <div className="absolute inset-x-0 top-0 hairline" />
       <div className="absolute inset-x-0 bottom-0 hairline" />
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex items-center justify-between gap-4 py-2.5 text-xs">

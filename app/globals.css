@@ -81,6 +81,9 @@
   /* Section bg gradient (was: --grad-onyx) */
   --grad-soft: linear-gradient(180deg, oklch(0.13 0.008 60) 0%, oklch(0.08 0.006 60) 100%);
 
+  /* Announcement bar gradient — subtle horizontal band */
+  --grad-bar: linear-gradient(90deg, oklch(0.13 0.008 60) 0%, oklch(0.18 0.02 60) 50%, oklch(0.13 0.008 60) 100%);
+
   /* Body radial glows */
   --bg-glow-1: oklch(0.22 0.04 60 / 0.45);
   --bg-glow-2: oklch(0.2 0.03 80 / 0.35);
@@ -156,6 +159,9 @@
   /* Section bg — barely-tinted cream gradient instead of onyx */
   --grad-soft: linear-gradient(180deg, oklch(0.96 0.014 82) 0%, oklch(0.93 0.018 80) 100%);
   --grad-onyx: var(--grad-soft);
+
+  /* Announcement bar — soft warm-cream band */
+  --grad-bar: linear-gradient(90deg, oklch(0.96 0.014 82) 0%, oklch(0.93 0.022 78) 50%, oklch(0.96 0.014 82) 100%);
 
   /* Body radial glows — soft warm/cream haze */
   --bg-glow-1: oklch(0.88 0.05 78 / 0.55);

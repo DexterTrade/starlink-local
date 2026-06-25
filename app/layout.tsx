@@ -17,25 +17,46 @@ export const metadata: Metadata = {
   applicationName: siteConfig.brand.name,
   authors: [{ name: siteConfig.brand.name }],
   keywords: [
-    "logistics",
+    "courier",
     "cargo",
+    "logistics",
     "freight forwarding",
     "DDP shipping",
     "international shipping",
-    "Pakistan logistics",
+    "Pakistan courier",
+    "Pakistan cargo",
     siteConfig.brand.name,
+    siteConfig.brand.short,
   ],
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: siteConfig.brand.name,
     description: siteConfig.brand.description,
     url: getSiteUrl(),
     siteName: siteConfig.brand.name,
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.brand.name} — ${siteConfig.brand.tagline}`,
+        type: "image/svg+xml",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.brand.name,
     description: siteConfig.brand.description,
+    images: ["/og-image.svg"],
   },
 };
 

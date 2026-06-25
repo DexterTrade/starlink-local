@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
 const VOICES = [
   {
@@ -9,8 +10,7 @@ const VOICES = [
     place: "Lahore → London",
   },
   {
-    quote:
-      "We move 40+ parcels a month to the United States. Marth is the only forwarder we've worked with that volunteered status before we asked.",
+    quote: `We move 40+ parcels a month to the United States. ${siteConfig.brand.short} is the only forwarder we've worked with that volunteered status before we asked.`,
     name: "Fatima Khan",
     title: "E-commerce Founder",
     place: "Karachi → New Jersey",
